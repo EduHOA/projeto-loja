@@ -1,0 +1,64 @@
+.bg-mercado-livre {
+    background-color: #ffeb3b; /* Amarelo do Mercado Livre */
+}
+
+.btn-mercado-livre {
+    background-color: #3483fa; /* Azul do Mercado Livre */
+    color: white;
+}
+
+.custom-file-label::after {
+    content: "Procurar";
+    background-color: #3483fa;
+    color: white;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #3483fa;
+}
+
+/* Estilos personalizados para Amazon */
+.bg-amazon {
+    background-color: #ff9900; /* Cor da Amazon */
+}
+
+.btn-amazon {
+    background-color: #ff9900; /* Cor da Amazon */
+    color: rgb(223, 216, 216);
+}
+
+.custom-file-label::after {
+    content: "Procurar";
+    background-color: #ff9900;
+    color: rgb(223, 216, 216);
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.card {
+    background-color: rgb(223, 216, 216);
+    border: 2px solid #ff9900;
+}
+
+/* Estilos personalizados para Shopee */
+.bg-shopee {
+    background-color: #f53d2d; /* Cor da Shopee */
+}
+
+.btn-shopee {
+    background-color: #f53d2d; /* Cor da Shopee */
+    color: white;
+}
+
+.custom-file-label::after {
+    content: "Procurar";
+    background-color: #f53d2d;
+    color: white;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.card {
+    background-color: rgb(223, 216, 216);
+    border: 2px solid #f53d2d;
+}
