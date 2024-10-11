@@ -3,7 +3,7 @@ services:
   nestjs-app:
     build: .
     ports:
-      - "3000:3000"
+      - "3006:3006"
     volumes:
       - .:/app
       - /app/node_modules
