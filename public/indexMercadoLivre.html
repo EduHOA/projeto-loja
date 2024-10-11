@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Processor</title>
+    <title>Mercado Livre Vendas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
 </head>
-<body>
-    <h1>Upload Excel File</h1>
-    <input type="file" id="upload" accept=".xlsx, .xls" />
-    <br><br>
-    <button onclick="processExcel()">Process File</button>
-    <br><br>
-    <a id="downloadLink" style="display:none;">Download Processed File</a>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h1 class="card-title text-center">Vendas Mercado Livre</h1>
+                <input type="file" id="upload" accept=".xlsx, .xls" class="form-control mb-3" />
+                <button onclick="processExcel()" class="btn btn-primary btn-block">Processar Arquivo</button>
+                <a id="downloadLink" class="btn btn-success btn-block mt-3" style="display:none;">Download do Arquivo Processado</a>
+            </div>
+        </div>
+    </div>
 
     <script>
         function processExcel() {
@@ -104,6 +109,6 @@
             return filteredData;
         }
     </script>
-    <script src="app.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
