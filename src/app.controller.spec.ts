@@ -1,22 +1,22 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { Controller, Get, Module, Res } from '@nestjs/common';
+import { Response } from 'express';
+import { join } from 'path';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
-describe('AppController', () => {
-  let appController: AppController;
+@Controller()
+export class AppController {
+  @Get()
+  getHome(@Res() res: Response) {
+    res.sendFile(join(__dirname, '..', 'public', 'index.html'));
+  }
+}
 
-  beforeEach(async () => {
-    const app: TestingModule = await Test.createTestingModule({
-      controllers: [AppController],
-      providers: [AppService],
-    }).compile();
-
-    appController = app.get<AppController>(AppController);
-  });
-
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
-    });
-  });
-});
+@Module({
+  imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
+  ],
+  controllers: [AppController],
+})
+export class AppModule {}
