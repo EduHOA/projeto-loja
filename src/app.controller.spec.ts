@@ -1,15 +1,7 @@
-import { Controller, Get, Module, Res } from '@nestjs/common';
-import { Response } from 'express';
-import { join } from 'path';
+import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
-
-@Controller()
-export class AppController {
-  @Get()
-  getHome(@Res() res: Response) {
-    res.sendFile(join(__dirname, '..', 'public', 'index.html'));
-  }
-}
+import { join } from 'path';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
