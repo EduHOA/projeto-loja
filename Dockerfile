@@ -1,5 +1,5 @@
 # Use uma imagem base oficial do Node.js
-FROM node:14
+FROM node:18
 
 # Define o diretório de trabalho no contêiner
 WORKDIR /app
@@ -16,9 +16,8 @@ COPY . .
 # Compila o projeto TypeScript
 RUN npm run build
 
-# Expõe a porta em que a aplicação irá rodar
+# Exponha a porta em que a aplicação irá rodar
 EXPOSE 3000
 
-
 # Comando para iniciar a aplicação
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:prod"]
