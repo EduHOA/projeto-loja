@@ -7,7 +7,7 @@ export class AppController {
 
   @Get()
   getHome(@Res() res: Response) {
-    res.sendFile(join(__dirname, '..', 'public', 'index.html'));
+    res.sendFile(join(__dirname, '..', 'public', 'Index.html'));
   }
 
   @Get('meli')
